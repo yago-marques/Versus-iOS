@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F3D0BE80FACA934DDB249D9 /* Pods_Versus_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EB5B003B00AA7A422E56D3 /* Pods_Versus_iOS.framework */; };
+		D7BEA262DCD685D1008D7101 /* Pods_Versus_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4F67985CBF0F0B30FE93D /* Pods_Versus_iOSTests.framework */; };
+		DF2ECF352B963C7F0037E7DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ECF342B963C7F0037E7DE /* AppDelegate.swift */; };
+		DF2ECF372B963C7F0037E7DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ECF362B963C7F0037E7DE /* SceneDelegate.swift */; };
+		DF2ECF3E2B963C800037E7DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF2ECF3D2B963C800037E7DE /* Assets.xcassets */; };
+		DF2ECF412B963C800037E7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2ECF3F2B963C800037E7DE /* LaunchScreen.storyboard */; };
+		DF2ECF4C2B963C800037E7DE /* Versus_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ECF4B2B963C800037E7DE /* Versus_iOSTests.swift */; };
+		DF2ECFCB2B968A4E0037E7DE /* Versus-iOS-APP.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ECFCA2B968A4E0037E7DE /* Versus-iOS-APP.swift */; };
+		DF2ECFD02B968C680037E7DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ECFCF2B968C680037E7DE /* ContentView.swift */; };
+		DF2ECFD22B968CD20037E7DE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ECFD12B968CD20037E7DE /* Core.framework */; };
+		DF2ECFD32B968CD20037E7DE /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ECFD12B968CD20037E7DE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF2ECFD62B968CDB0037E7DE /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */; };
+		DF2ECFD72B968CDB0037E7DE /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF2ECF482B963C800037E7DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF2ECF292B963C7F0037E7DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF2ECF302B963C7F0037E7DE;
+			remoteInfo = "Versus-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF2ECFD42B968CD20037E7DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF2ECFD32B968CD20037E7DE /* Core.framework in Embed Frameworks */,
+				DF2ECFD72B968CDB0037E7DE /* DesignSystem.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8A4C1F2E17809C82D5186D7F /* Pods-Versus-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versus-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-Versus-iOSTests/Pods-Versus-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2EB5B003B00AA7A422E56D3 /* Pods_Versus_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Versus_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B689F9B3E89E596374EE16E0 /* Pods-Versus-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versus-iOS.release.xcconfig"; path = "Target Support Files/Pods-Versus-iOS/Pods-Versus-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D7149ABF45DBCF017B695D67 /* Pods-Versus-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versus-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Versus-iOSTests/Pods-Versus-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF2ECF312B963C7F0037E7DE /* Versus-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Versus-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2ECF342B963C7F0037E7DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF2ECF362B963C7F0037E7DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DF2ECF3D2B963C800037E7DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF2ECF402B963C800037E7DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF2ECF422B963C800037E7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF2ECF472B963C800037E7DE /* Versus-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Versus-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2ECF4B2B963C800037E7DE /* Versus_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Versus_iOSTests.swift; sourceTree = "<group>"; };
+		DF2ECFCA2B968A4E0037E7DE /* Versus-iOS-APP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Versus-iOS-APP.swift"; sourceTree = "<group>"; };
+		DF2ECFCF2B968C680037E7DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF2ECFD12B968CD20037E7DE /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E30779924C8640DD95E57879 /* Pods-Versus-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versus-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Versus-iOS/Pods-Versus-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F9E4F67985CBF0F0B30FE93D /* Pods_Versus_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Versus_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF2ECF2E2B963C7F0037E7DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2ECFD62B968CDB0037E7DE /* DesignSystem.framework in Frameworks */,
+				6F3D0BE80FACA934DDB249D9 /* Pods_Versus_iOS.framework in Frameworks */,
+				DF2ECFD22B968CD20037E7DE /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2ECF442B963C800037E7DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7BEA262DCD685D1008D7101 /* Pods_Versus_iOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3789ED2DFC9B290E02CCCB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */,
+				DF2ECFD12B968CD20037E7DE /* Core.framework */,
+				A2EB5B003B00AA7A422E56D3 /* Pods_Versus_iOS.framework */,
+				F9E4F67985CBF0F0B30FE93D /* Pods_Versus_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF2ECF282B963C7F0037E7DE = {
+			isa = PBXGroup;
+			children = (
+				DF2ECF332B963C7F0037E7DE /* Versus-iOS */,
+				DF2ECF4A2B963C800037E7DE /* Versus-iOSTests */,
+				DF2ECF322B963C7F0037E7DE /* Products */,
+				EA8927B88166F1E18BBB1495 /* Pods */,
+				A3789ED2DFC9B290E02CCCB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DF2ECF322B963C7F0037E7DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF2ECF312B963C7F0037E7DE /* Versus-iOS.app */,
+				DF2ECF472B963C800037E7DE /* Versus-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF2ECF332B963C7F0037E7DE /* Versus-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF2ECFCE2B968C540037E7DE /* Source */,
+				DF2ECFCD2B968C3B0037E7DE /* Application */,
+				DF2ECFCC2B968C290037E7DE /* Resource */,
+				DF2ECF3F2B963C800037E7DE /* LaunchScreen.storyboard */,
+				DF2ECF422B963C800037E7DE /* Info.plist */,
+			);
+			path = "Versus-iOS";
+			sourceTree = "<group>";
+		};
+		DF2ECF4A2B963C800037E7DE /* Versus-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF2ECF4B2B963C800037E7DE /* Versus_iOSTests.swift */,
+			);
+			path = "Versus-iOSTests";
+			sourceTree = "<group>";
+		};
+		DF2ECFCC2B968C290037E7DE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DF2ECF3D2B963C800037E7DE /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DF2ECFCD2B968C3B0037E7DE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DF2ECF342B963C7F0037E7DE /* AppDelegate.swift */,
+				DF2ECF362B963C7F0037E7DE /* SceneDelegate.swift */,
+				DF2ECFCA2B968A4E0037E7DE /* Versus-iOS-APP.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DF2ECFCE2B968C540037E7DE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DF2ECFCF2B968C680037E7DE /* ContentView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EA8927B88166F1E18BBB1495 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E30779924C8640DD95E57879 /* Pods-Versus-iOS.debug.xcconfig */,
+				B689F9B3E89E596374EE16E0 /* Pods-Versus-iOS.release.xcconfig */,
+				D7149ABF45DBCF017B695D67 /* Pods-Versus-iOSTests.debug.xcconfig */,
+				8A4C1F2E17809C82D5186D7F /* Pods-Versus-iOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF2ECF302B963C7F0037E7DE /* Versus-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2ECF5B2B963C800037E7DE /* Build configuration list for PBXNativeTarget "Versus-iOS" */;
+			buildPhases = (
+				78E61DAD2AF2EC7D10FD39AA /* [CP] Check Pods Manifest.lock */,
+				DF2ECF2D2B963C7F0037E7DE /* Sources */,
+				DF2ECF2E2B963C7F0037E7DE /* Frameworks */,
+				DF2ECF2F2B963C7F0037E7DE /* Resources */,
+				DF2ECFD42B968CD20037E7DE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Versus-iOS";
+			productName = "Versus-iOS";
+			productReference = DF2ECF312B963C7F0037E7DE /* Versus-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF2ECF462B963C800037E7DE /* Versus-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2ECF5E2B963C800037E7DE /* Build configuration list for PBXNativeTarget "Versus-iOSTests" */;
+			buildPhases = (
+				00A307E947D66269FCB120B8 /* [CP] Check Pods Manifest.lock */,
+				DF2ECF432B963C800037E7DE /* Sources */,
+				DF2ECF442B963C800037E7DE /* Frameworks */,
+				DF2ECF452B963C800037E7DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF2ECF492B963C800037E7DE /* PBXTargetDependency */,
+			);
+			name = "Versus-iOSTests";
+			productName = "Versus-iOSTests";
+			productReference = DF2ECF472B963C800037E7DE /* Versus-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF2ECF292B963C7F0037E7DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					DF2ECF302B963C7F0037E7DE = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					DF2ECF462B963C800037E7DE = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = DF2ECF302B963C7F0037E7DE;
+					};
+				};
+			};
+			buildConfigurationList = DF2ECF2C2B963C7F0037E7DE /* Build configuration list for PBXProject "Versus-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF2ECF282B963C7F0037E7DE;
+			productRefGroup = DF2ECF322B963C7F0037E7DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF2ECF302B963C7F0037E7DE /* Versus-iOS */,
+				DF2ECF462B963C800037E7DE /* Versus-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF2ECF2F2B963C7F0037E7DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2ECF412B963C800037E7DE /* LaunchScreen.storyboard in Resources */,
+				DF2ECF3E2B963C800037E7DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2ECF452B963C800037E7DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00A307E947D66269FCB120B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Versus-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78E61DAD2AF2EC7D10FD39AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Versus-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF2ECF2D2B963C7F0037E7DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2ECF352B963C7F0037E7DE /* AppDelegate.swift in Sources */,
+				DF2ECF372B963C7F0037E7DE /* SceneDelegate.swift in Sources */,
+				DF2ECFD02B968C680037E7DE /* ContentView.swift in Sources */,
+				DF2ECFCB2B968A4E0037E7DE /* Versus-iOS-APP.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2ECF432B963C800037E7DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2ECF4C2B963C800037E7DE /* Versus_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF2ECF492B963C800037E7DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF2ECF302B963C7F0037E7DE /* Versus-iOS */;
+			targetProxy = DF2ECF482B963C800037E7DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF2ECF3F2B963C800037E7DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF2ECF402B963C800037E7DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF2ECF592B963C800037E7DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF2ECF5A2B963C800037E7DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF2ECF5C2B963C800037E7DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E30779924C8640DD95E57879 /* Pods-Versus-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VHW4V3TPGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Versus-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.yago.Versus-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DF2ECF5D2B963C800037E7DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B689F9B3E89E596374EE16E0 /* Pods-Versus-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VHW4V3TPGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Versus-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.yago.Versus-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DF2ECF5F2B963C800037E7DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7149ABF45DBCF017B695D67 /* Pods-Versus-iOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VHW4V3TPGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.yago.Versus-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Versus-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Versus-iOS";
+			};
+			name = Debug;
+		};
+		DF2ECF602B963C800037E7DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A4C1F2E17809C82D5186D7F /* Pods-Versus-iOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VHW4V3TPGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.yago.Versus-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Versus-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Versus-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF2ECF2C2B963C7F0037E7DE /* Build configuration list for PBXProject "Versus-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2ECF592B963C800037E7DE /* Debug */,
+				DF2ECF5A2B963C800037E7DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF2ECF5B2B963C800037E7DE /* Build configuration list for PBXNativeTarget "Versus-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2ECF5C2B963C800037E7DE /* Debug */,
+				DF2ECF5D2B963C800037E7DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF2ECF5E2B963C800037E7DE /* Build configuration list for PBXNativeTarget "Versus-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2ECF5F2B963C800037E7DE /* Debug */,
+				DF2ECF602B963C800037E7DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF2ECF292B963C7F0037E7DE /* Project object */;
+}

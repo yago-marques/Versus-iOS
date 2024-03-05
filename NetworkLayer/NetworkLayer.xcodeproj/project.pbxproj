@@ -11,8 +11,10 @@
 		7EE7C8727F144DD39625D5C3 /* Pods_NetworkLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B781B9EFCB99B72C2AF6592 /* Pods_NetworkLayerTests.framework */; };
 		DF2ED0122B9693500037E7DE /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ED0092B9693500037E7DE /* NetworkLayer.framework */; };
 		DF2ED0172B9693500037E7DE /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ED0162B9693500037E7DE /* NetworkLayerTests.swift */; };
-		DF2ED0182B9693500037E7DE /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2ED00C2B9693500037E7DE /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF2ED0462B9694380037E7DE /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ED0452B9694380037E7DE /* NetworkLayer.swift */; };
+		DF2ED0462B9694380037E7DE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ED0452B9694380037E7DE /* Network.swift */; };
+		DF428BB62B9778B3004A19AA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BB52B9778B3004A19AA /* Endpoint.swift */; };
+		DF428BB82B978408004A19AA /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BB72B978408004A19AA /* Response.swift */; };
+		DF428BBB2B978A81004A19AA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BBA2B978A81004A19AA /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +34,12 @@
 		BEAD7EFE7AB40C6ABEF34049 /* Pods-NetworkLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayerTests.debug.xcconfig"; path = "Target Support Files/Pods-NetworkLayerTests/Pods-NetworkLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A8CC3F858DEEA4E2922D8B /* Pods-NetworkLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayer.debug.xcconfig"; path = "Target Support Files/Pods-NetworkLayer/Pods-NetworkLayer.debug.xcconfig"; sourceTree = "<group>"; };
 		DF2ED0092B9693500037E7DE /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF2ED00C2B9693500037E7DE /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		DF2ED0112B9693500037E7DE /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2ED0162B9693500037E7DE /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
-		DF2ED0452B9694380037E7DE /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		DF2ED0452B9694380037E7DE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		DF428BB52B9778B3004A19AA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DF428BB72B978408004A19AA /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		DF428BBA2B978A81004A19AA /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		F3FDDC9694F60252E5992B99 /* Pods-NetworkLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayer.release.xcconfig"; path = "Target Support Files/Pods-NetworkLayer/Pods-NetworkLayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,8 +96,11 @@
 		DF2ED00B2B9693500037E7DE /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				DF2ED00C2B9693500037E7DE /* NetworkLayer.h */,
-				DF2ED0452B9694380037E7DE /* NetworkLayer.swift */,
+				DF428BB92B978A75004A19AA /* Log */,
+				DF428BB32B977833004A19AA /* Wrappers */,
+				DF2ED0452B9694380037E7DE /* Network.swift */,
+				DF428BB52B9778B3004A19AA /* Endpoint.swift */,
+				DF428BB72B978408004A19AA /* Response.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -104,6 +111,21 @@
 				DF2ED0162B9693500037E7DE /* NetworkLayerTests.swift */,
 			);
 			path = NetworkLayerTests;
+			sourceTree = "<group>";
+		};
+		DF428BB32B977833004A19AA /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		DF428BB92B978A75004A19AA /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				DF428BBA2B978A81004A19AA /* Log.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		F4B34F737B99C515ED95CF1A /* Pods */ = {
@@ -125,7 +147,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF2ED0182B9693500037E7DE /* NetworkLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF2ED0462B9694380037E7DE /* NetworkLayer.swift in Sources */,
+				DF428BB62B9778B3004A19AA /* Endpoint.swift in Sources */,
+				DF428BB82B978408004A19AA /* Response.swift in Sources */,
+				DF428BBB2B978A81004A19AA /* Log.swift in Sources */,
+				DF2ED0462B9694380037E7DE /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

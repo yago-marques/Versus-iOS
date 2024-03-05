@@ -70,12 +70,8 @@ struct Log {
     
     static func analyze(_ endpoint: Endpoint) {
         #if DEBUG
-        if endpoint.baseUrl.contains("://") {
-            Log.message("Schema(https:// or http://) is not needed in base url", .warning)
-        }
-        
         if endpoint.path.hasSuffix("/") {
-            Log.message("Bar(/) at the end is not needed in path", .warning)
+            Log.message("Bar(/) at the end is not needed in path ~> \(endpoint.path)", .warning)
         }
         #endif
     }

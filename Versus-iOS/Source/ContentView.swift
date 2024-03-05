@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import Core
-import DesignSystem
 
 struct ContentView: View {
     var body: some View {

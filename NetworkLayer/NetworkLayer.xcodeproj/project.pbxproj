@@ -97,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				DF428BB92B978A75004A19AA /* Log */,
-				DF428BB32B977833004A19AA /* Wrappers */,
 				DF2ED0452B9694380037E7DE /* Network.swift */,
 				DF428BB52B9778B3004A19AA /* Endpoint.swift */,
 				DF428BB72B978408004A19AA /* Response.swift */,
@@ -111,13 +110,6 @@
 				DF2ED0162B9693500037E7DE /* NetworkLayerTests.swift */,
 			);
 			path = NetworkLayerTests;
-			sourceTree = "<group>";
-		};
-		DF428BB32B977833004A19AA /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wrappers;
 			sourceTree = "<group>";
 		};
 		DF428BB92B978A75004A19AA /* Log */ = {

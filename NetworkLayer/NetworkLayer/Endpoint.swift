@@ -7,20 +7,20 @@
 
 import Foundation
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case GET = "GET"
     case POST = "POST"
     case PUT = "PUT"
     case DELETE = "DELETE"
 }
 
-protocol Endpoint {
-    var baseUrl: String { get set }
-    var path: String { get set }
-    var method: HTTPMethod { get set }
-    var queries: [String: String] { get set }
-    var headers: [String: String] { get set }
-    var body: Data? { get set }
+public protocol Endpoint {
+    var baseUrl: String { get }
+    var path: String { get }
+    var method: HTTPMethod { get }
+    var queries: [String: String] { get }
+    var headers: [String: String] { get }
+    var body: Data? { get }
 }
 
 extension Endpoint {
@@ -31,7 +31,6 @@ extension Endpoint {
     private func url() -> URL? {
         var components = URLComponents(string: baseUrl)
         components?.path = path
-        components?.scheme = "https"
         components?.queryItems = queries()
         
         return components?.url

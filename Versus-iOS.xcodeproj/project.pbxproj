@@ -20,6 +20,9 @@
 		DF2ECFD32B968CD20037E7DE /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ECFD12B968CD20037E7DE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DF2ECFD62B968CDB0037E7DE /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */; };
 		DF2ECFD72B968CDB0037E7DE /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF428BBD2B979FCC004A19AA /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428BBC2B979FCC004A19AA /* NetworkLayer.framework */; };
+		DF428BBE2B979FCC004A19AA /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF428BBC2B979FCC004A19AA /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF428BC02B979FF5004A19AA /* RickyAndMortyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BBF2B979FF5004A19AA /* RickyAndMortyEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DF428BBE2B979FCC004A19AA /* NetworkLayer.framework in Embed Frameworks */,
 				DF2ECFD32B968CD20037E7DE /* Core.framework in Embed Frameworks */,
 				DF2ECFD72B968CDB0037E7DE /* DesignSystem.framework in Embed Frameworks */,
 			);
@@ -64,6 +68,8 @@
 		DF2ECFCF2B968C680037E7DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF2ECFD12B968CD20037E7DE /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF428BBC2B979FCC004A19AA /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF428BBF2B979FF5004A19AA /* RickyAndMortyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortyEndpoint.swift; sourceTree = "<group>"; };
 		E30779924C8640DD95E57879 /* Pods-Versus-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versus-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Versus-iOS/Pods-Versus-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F9E4F67985CBF0F0B30FE93D /* Pods_Versus_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Versus_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF2ECFD62B968CDB0037E7DE /* DesignSystem.framework in Frameworks */,
+				DF428BBD2B979FCC004A19AA /* NetworkLayer.framework in Frameworks */,
 				6F3D0BE80FACA934DDB249D9 /* Pods_Versus_iOS.framework in Frameworks */,
 				DF2ECFD22B968CD20037E7DE /* Core.framework in Frameworks */,
 			);
@@ -93,6 +100,7 @@
 		A3789ED2DFC9B290E02CCCB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF428BBC2B979FCC004A19AA /* NetworkLayer.framework */,
 				DF2ECFD52B968CDB0037E7DE /* DesignSystem.framework */,
 				DF2ECFD12B968CD20037E7DE /* Core.framework */,
 				A2EB5B003B00AA7A422E56D3 /* Pods_Versus_iOS.framework */,
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2ECFCF2B968C680037E7DE /* ContentView.swift */,
+				DF428BBF2B979FF5004A19AA /* RickyAndMortyEndpoint.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -329,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF2ECF352B963C7F0037E7DE /* AppDelegate.swift in Sources */,
+				DF428BC02B979FF5004A19AA /* RickyAndMortyEndpoint.swift in Sources */,
 				DF2ECF372B963C7F0037E7DE /* SceneDelegate.swift in Sources */,
 				DF2ECFD02B968C680037E7DE /* ContentView.swift in Sources */,
 				DF2ECFCB2B968A4E0037E7DE /* Versus-iOS-APP.swift in Sources */,

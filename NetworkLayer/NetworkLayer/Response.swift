@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum ResponseStatus {
+public enum ResponseStatus {
     case finished
     case stoped(reason: String)
 }
 
-struct Response {
-    let code: Int?
-    let data: Data?
-    let status: ResponseStatus
+public struct Response {
+    public let code: Int?
+    public let data: Data?
+    public let status: ResponseStatus
     
     static func stoped(reason: String) -> Self {
         .init(code: nil, data: nil, status: .stoped(reason: reason))

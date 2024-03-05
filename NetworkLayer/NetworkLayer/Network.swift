@@ -7,8 +7,14 @@
 
 import Foundation
 
-public class Network {
-    func executeHTTP(endpoint: Endpoint) async throws -> Response {
+final public class Network {
+    private let session: URLSession
+    
+    public init(session: URLSession = .init(configuration: .default)) {
+        self.session = session
+    }
+    
+    public func executeHTTP(endpoint: Endpoint) async throws -> Response {
         Log.analyze(endpoint)
         
         guard let request = endpoint.request() else {
@@ -17,9 +23,7 @@ public class Network {
         }
         
         Log.request(request)
-        
-        let session = URLSession(configuration: .default)
-        
+            
         let (data, response) = try await session.data(for: request)
         
         Log.message("endpoint called", .success)

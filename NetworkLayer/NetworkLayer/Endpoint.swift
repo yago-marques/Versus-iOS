@@ -1,5 +1,5 @@
 //
-//  EndpointProtocol.swift
+//  Endpoint.swift
 //  NetworkLayer
 //
 //  Created by Yago Marques on 05/03/24.

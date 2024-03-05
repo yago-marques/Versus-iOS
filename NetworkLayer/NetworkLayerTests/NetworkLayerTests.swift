@@ -8,29 +8,111 @@
 import XCTest
 @testable import NetworkLayer
 
+private enum APIResponseError: Error {
+    case invalidURL
+    case invalidResponse
+}
+
 final class NetworkLayerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_ExecuteHTTP_WhenEndpointIsCorrect_ShouldReturnValidDataAndCodeOnFinishedResponse() async throws {
+        let sut = makeSUT(for: simpleCorrectGetHandler)
+        
+        let response = try await sut.executeHTTP(endpoint: MockedEndpoint.simpleCorrectGet)
+        
+        XCTAssertEqual(response.status, .finished)
+        XCTAssertNotNil(response.data)
+        XCTAssertEqual(response.code, 200)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_ExecuteHTTP_WhenEndpointIsIncorrect_ShouldReturnStopedResponse() async throws {
+        let sut = makeSUT(for: simpleCorrectGetHandler)
+        
+        let response = try await sut.executeHTTP(endpoint: MockedEndpoint.simpleIncorrectGet)
+        
+        XCTAssertEqual(response.status, .stoped(reason: "error to build request"))
+        XCTAssertNil(response.data)
+        XCTAssertNil(response.code)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_ExecuteHTTP_WhenEndpointIsCorrectButResponseIsNotHTTP_ShouldReturnStopedResponse() async throws {
+        let sut = makeSUT(for: simpleIncorrectGetHandler)
+        
+        let response = try await sut.executeHTTP(endpoint: MockedEndpoint.simpleCorrectGet)
+        
+        XCTAssertEqual(response.status, .stoped(reason: "invalid response"))
+        XCTAssertNil(response.data)
+        XCTAssertNil(response.code)
     }
 
 }
+
+private extension NetworkLayerTests {
+    func makeSUT(for handler: @escaping (URLRequest) throws -> (URLResponse, Data?)) -> Network {
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [MockURLSession.self]
+        let urlSession = URLSession(configuration: configuration)
+        MockURLSession.requestHandler = handler
+        
+        return Network(session: urlSession)
+    }
+    
+    func simpleCorrectGetHandler(_ request: URLRequest) throws -> (URLResponse, Data?) {
+        guard let url = request.url else { throw APIResponseError.invalidURL }
+        
+        guard let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: request.allHTTPHeaderFields) else {
+            throw APIResponseError.invalidResponse
+        }
+        
+        return (response, nil)
+    }
+    
+    func simpleIncorrectGetHandler(_ request: URLRequest) throws -> (URLResponse, Data?) {
+        let json = """
+        {
+            "status": "success"
+        }
+        """
+        let data = json.data(using: .utf8)
+        
+        let response = URLResponse()
+        
+        return (response, data)
+    }
+}
+
+private enum MockedEndpoint: Endpoint {
+    case simpleCorrectGet
+    case simpleIncorrectGet
+    
+    var baseUrl: String {
+        "https://versus.com"
+    }
+    
+    var path: String {
+        switch self {
+        case .simpleCorrectGet:
+            "/correct"
+        case .simpleIncorrectGet:
+            "incorrect"
+        }
+        
+    }
+    
+    var method: HTTPMethod {
+        .GET
+    }
+    
+    var queries: [String : String] {
+        ["page": "3"]
+    }
+    
+    var headers: [String : String] {
+        ["x-api-key": "my-key"]
+    }
+    
+    var body: Data? {
+        nil
+    }
+}
+

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ResponseStatus {
+public enum ResponseStatus: Equatable {
     case finished
     case stoped(reason: String)
 }

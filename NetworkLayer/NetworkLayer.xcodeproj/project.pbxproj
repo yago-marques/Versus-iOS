@@ -15,6 +15,7 @@
 		DF428BB62B9778B3004A19AA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BB52B9778B3004A19AA /* Endpoint.swift */; };
 		DF428BB82B978408004A19AA /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BB72B978408004A19AA /* Response.swift */; };
 		DF428BBB2B978A81004A19AA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BBA2B978A81004A19AA /* Log.swift */; };
+		DF428BC22B97A87F004A19AA /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF428BC12B97A87F004A19AA /* MockURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		DF428BB52B9778B3004A19AA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		DF428BB72B978408004A19AA /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		DF428BBA2B978A81004A19AA /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		DF428BC12B97A87F004A19AA /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		F3FDDC9694F60252E5992B99 /* Pods-NetworkLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayer.release.xcconfig"; path = "Target Support Files/Pods-NetworkLayer/Pods-NetworkLayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2ED0162B9693500037E7DE /* NetworkLayerTests.swift */,
+				DF428BC12B97A87F004A19AA /* MockURLSession.swift */,
 			);
 			path = NetworkLayerTests;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF428BC22B97A87F004A19AA /* MockURLSession.swift in Sources */,
 				DF2ED0172B9693500037E7DE /* NetworkLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

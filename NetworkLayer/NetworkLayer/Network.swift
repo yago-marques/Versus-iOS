@@ -7,7 +7,11 @@
 
 import Foundation
 
-final public class Network {
+public protocol HTTPClient {
+    func executeHTTP(endpoint: Endpoint) async throws -> Response
+}
+
+final public class Network: HTTPClient {
     private let session: URLSession
     
     public init(session: URLSession = .init(configuration: .default)) {

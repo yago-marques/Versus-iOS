@@ -8,5 +8,7 @@
 import Foundation
 
 public class Core {
-    public static func example() { }
+    public static func example() { 
+        
+    }
 }

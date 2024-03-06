@@ -1,0 +1,38 @@
+name: Build and Test
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-
+    - name: CocoaPod Install
+      run: pod install
+    - name: Build
+      run: xcodebuild -workspace Versus.xcworkspace -scheme Versus-iOS -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
+
+  test:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-
+    - name: CocoaPod Install
+      run: pod install
+    - name: Test Network
+      run: xcodebuild -workspace Versus.xcworkspace -scheme NetworkLayer -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' test
+    - name: Test Core
+      run: xcodebuild -workspace Versus.xcworkspace -scheme Core -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' test
+    - name: Test App
+      run: xcodebuild -workspace Versus.xcworkspace -scheme Versus-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' test
